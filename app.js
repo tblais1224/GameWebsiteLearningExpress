@@ -9,7 +9,7 @@ const fileUpload = require("express-fileupload");
 
 //this connects the server to the mongodb database and calls an error if it doesnt connect
 //make sure to add ip to mongodb whitelist
-mongoose.connect("mongodb+srv://tblais1224:ana1224@tblaisproductions-rbrxs.mongodb.net/test?retryWrites=true", {
+mongoose.connect("mongodb+srv:/username:password@tblaisproductions-rbrxs.mongodb.net/test?retryWrites=true", {
     useNewUrlParser: true
 }, function(error){
     if (error) {
