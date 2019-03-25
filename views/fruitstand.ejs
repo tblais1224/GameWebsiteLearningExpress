@@ -1,0 +1,107 @@
+<% include partials/header.ejs %>
+
+<!-- loook at flexbox!!!!!!! -->
+
+<h1 style="color: orange; padding-bottom: 30px">Welcome to Felicias' Fruit Stand!!!</h1>
+<form action="/fruitstand" method="POST" enctype="multipart/form-data">
+<button type="submit" class="btn btn-primary">Submit fruit to your shopping cart!</button>
+        <div class="row" style="padding-bottom: 50px; padding-top: 50px">
+                <div class="col-md-4" style="padding-bottom: 20px">
+                        <div class="card" style="width: 14rem; background-color: skyblue">
+                                <img class="card-img-top" src="images/apples.jpg" style="object-fit: contain">
+                                <div class="card-body">
+                                        <h4 class="card-title" id="fruitName0">Apples</h4>
+                                        <p class="card-title" id="fruitName0">How many apples would you like?</p>
+                                        <p class="card-title" id="fruitName0">$1.00 each</p>
+                                        <input id="fruitQuantity0" type="text" placeholder='(ex. "3")' name="apple">                       
+                                </div>
+                        </div>
+                </div>
+                <div class="col-md-4" style="padding-bottom: 20px">
+                        <div class="card" style="width: 14rem; background-color: skyblue">
+                                <img class="card-img-top" src="images/orange.jpg" style="object-fit: contain">
+                                <div class="card-body">
+                                        <h4 class="card-title" id="fruitName1">Oranges</h4>
+                                        <p class="card-title" id="fruitName1">How many oranges would you like?</p>
+                                        <p class="card-title" id="fruitName1">$1.75 each</p>
+                                        <input id="fruitQuantity1" type="text" placeholder='(ex. "3")' name="orange">                      
+                                </div>
+                        </div>
+                </div>
+                <div class="col-md-4" style="padding-bottom: 20px">
+                        <div class="card" style="width: 14rem; background-color: skyblue">
+                                <img class="card-img-top" src="images/peach.jpg" style="object-fit: contain">
+                                <div class="card-body">
+                                        <h4 class="card-title" id="fruitName2">Peaches</h4>
+                                        <p class="card-title" id="fruitName2">How many peaches would you like?</p>
+                                        <p class="card-title" id="fruitName2">$1.25 each</p>
+                                        <input id="fruitQuantity2" type="text" placeholder='(ex. "3")' name="peach">                      
+                                </div>
+                        </div>
+                </div>
+                <div class="col-md-4" style="padding-bottom: 20px">
+                        <div class="card" style="width: 14rem; background-color: skyblue">
+                                <img class="card-img-top" src="images/grapefruit.jpg" style="object-fit: contain">
+                                <div class="card-body">
+                                        <h4 class="card-title" id="fruitName3">Grapefruit</h4>
+                                        <p class="card-title" id="fruitName3">How many grapefruit would you like?</p>
+                                        <p class="card-title" id="fruitName3">$2.00 each</p>
+                                        <input id="fruitQuantity3" type="text" placeholder='(ex. "3")' name="grapefruit">
+                                </div>
+                        </div>
+                </div>
+        </div>
+        
+</form>
+
+<% include partials/footer.ejs %>
+
+     <!-- !PAGE CONTENT! 
+//     <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+//          First Photo Grid
+//         <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+//             <div class="w3-quarter">
+//                 <img src="images/apples.jpg" alt="apple" style="width:25%">
+//                 <h3 id="fruitName0" name="Apples">Apples</h3>
+//                 <p>Apples cost $1.00 each.<br>How many would you like to buy?</p>
+//                 <input id="fruitQuantity0" type="text" name="applequantity">
+//                 <button type='button' onclick="shoppingCart0()">Submit</button>
+//             </div>
+//             <div class="w3-quarter">
+//                 <img src="images/orange.jpg" alt="orange" style="width:25%">
+//                 <h3 id="fruitName1" name="Oranges">Oranges</h3>
+//                 <p>Oranges cost $1.50 each.<br>How many would you like to buy?</p>
+//                 <input id="fruitQuantity1" type="text" name="orangequantity">
+//                 <script type="text/javascript" id="fruitName">var fruit = "orange";</script>
+//                 <button type='button' onclick="shoppingCart1()">Submit</button>
+//             </div>
+//             <div class="w3-quarter">
+//                 <img src="images/peach.jpg" alt="peach" style="width:25%">
+//                 <h3 id="fruitName2" name="Peaches">Peaches</h3>
+//                 <p>Peaches cost $1.75 each.<br>How many would you like to buy?</p>
+//                 <input id="fruitQuantity2" type="text" name="peachquantity">
+//                 <script type="text/javascript" id="fruitName">var fruit = "peach";</script>
+//                 <button type='button' onclick="shoppingCart2()">Submit</button>
+//             </div>
+//             <div class="w3-quarter">
+//                 <img src="images/grapefruit.jpg" alt="grapefruit" style="width:25%">
+//                 <h3 id="fruitName3" name="Grapefruit">Grapefruit</h3>
+//                 <p>Grapefruit costs $2.00 each.<br>How many would you like to buy?</p>
+//                 <input id="fruitQuantity3" type="txt" name="grapefruitquantity">
+//                 <script type="text/javascript" id="fruitName">var fruit = "grapefruit";</script>
+//                 <button type='button' onclick="shoppingCart3()">Submit</button>
+//             </div>
+            
+
+
+//             <h2>Press submit to calculate the total cost of your fruit!</h2>
+//             <button type='button' onclick="fruitstand()">Submit</button>
+//             <h2 id="totalCost"></h2>
+//         </div>
+//         <script src="shoppingCart.js"></script>
+
+// </body> -->
+
+
+
